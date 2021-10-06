@@ -11,7 +11,6 @@ def question1():
 
 
 # Question 2.ii
-
 def question2ii():
     commercialYears = tools.int_input("How many years of commercial software development experience do you have: ") > 4
     microsoftCert = tools.binaryOption("Do you hold a Microsoft certification y/n:", "y", "n") == "y"
@@ -23,7 +22,6 @@ def question2ii():
 
 
 # Question 3
-
 def question3():
     quantity = tools.intInput("Enter quantity => ")
 
