@@ -1,4 +1,6 @@
+from typing import Mapping
 import tools
+from random import randrange
 
 
 # Question 1
@@ -61,4 +63,24 @@ def question3():
     print(f"Merging complete, new dictionary: \n- {dictMerged}")
 
 
-question3()
+
+
+# Question 4
+def question4(first, second):
+    return dict(zip(first, second))
+
+
+# Question 5
+def question5():
+    dict = {}
+    
+    for x in range(10):
+        dict[x+1] = randrange(1, 20)
+    
+    first = list(dict.keys())
+    second = list(dict.values())
+    
+    print(first, second)
+    
+    
+question5()
