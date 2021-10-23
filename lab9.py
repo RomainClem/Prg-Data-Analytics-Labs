@@ -1,4 +1,5 @@
 from typing import Mapping
+from typing_extensions import TypeVarTuple
 import tools
 from random import randrange
 
@@ -51,7 +52,8 @@ def question3():
 
     for x in shortestDict:
         if x in dictMerged:
-            choice = tools.binaryOption(f"Key '{x}' with value '{shortestDict[x]}' already exist with value '{dictMerged[x]}'."
+            choice = tools.binaryOption(f"Key '{x}' with value '{shortestDict[x]}'"
+                                        f"already exist with value '{dictMerged[x]}'."
                                         f"\nWhich would you like to keep: "
                                         f"\n1. {shortestDict[x]}"
                                         f"\n2. {dictMerged[x]}\n=> ", "1", "2")
@@ -83,4 +85,43 @@ def question5():
     print(first, second)
     
     
-question5()
+# Question 6
+def question6(dict):
+    return set(dict.values())
+
+
+# Question 7
+def question7(setA, setB):
+    return setA ^ setB
+
+
+# Question 8
+def question8():
+    list = [1, "dog", 3, "cat", 1, 5, 44.6, "duck", 1]
+    intList = []
+    
+    for x in list:
+        if type(x) == int:
+            intList.append(x)
+            
+            
+# Question 9
+def question9():
+    list = [1, "dog", 3, "cat", 1, 5, 44.6, "duck", 1]
+    intSet = set()
+    
+    for x in set(list):
+        if type(x) == int:
+            intSet.add(x)
+            
+            
+# Question 10
+def question9():
+    names = []
+
+    while True:
+        if tools.binaryOption("Add a name y/n => ", "y", "n") == "n":
+            break
+        studentName = tools.readNonemptyString("name => ")
+    
+    return tuple(names)

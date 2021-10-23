@@ -55,7 +55,7 @@ def question3():
             dict[alteredWord] = 1
     
     for word in dict:
-        if len(dict[word]) >= upperFreq:
+        if dict[word] >= upperFreq:
             print(word, " -- ", dict[word])
     
 
