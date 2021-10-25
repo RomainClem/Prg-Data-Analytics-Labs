@@ -48,11 +48,12 @@ def question3():
     for word in allWords:
         
         alteredWord = formatWord(word)
-        
-        if alteredWord in dict:
-            dict[alteredWord] = dict[alteredWord] +1
-        else:
-            dict[alteredWord] = 1
+
+        if len(alteredWord)==charLength:
+            if alteredWord in dict:
+                dict[alteredWord] = dict[alteredWord] +1
+            else:
+                dict[alteredWord] = 1
     
     for word in dict:
         if dict[word] >= upperFreq:
