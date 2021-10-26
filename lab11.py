@@ -59,5 +59,3 @@ def question3():
         if dict[word] >= upperFreq:
             print(word, " -- ", dict[word])
     
-
-question3()

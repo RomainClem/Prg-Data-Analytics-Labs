@@ -29,12 +29,11 @@ def question4():
     resultMinArr = np.amin(data[:, 9], axis=0)
     resultMeanArr = np.mean(data[:, 9], axis=0)
 
-
     print ("\t Max temp", resultMaxArr * 41)
     print ("\t Min temp", resultMinArr * 41)
     print ("\t Mean temp", resultMeanArr * 41)
 
 
 question4()
-
+    
         
