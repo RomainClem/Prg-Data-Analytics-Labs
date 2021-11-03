@@ -20,7 +20,7 @@ def LineDetector():
     lineStart = ["\"", "\'"] 
     lineEnd = ["\"", "\'", "."]
 
-    file = open('CountOfMonteCristo.txt', 'r')
+    file = open('test.txt', 'r')
     fileContent = file.read()
     file.close()
 
@@ -32,7 +32,7 @@ def LineDetector():
 
 
     for word in allWords:
-        if word[-1] in lineEnd and ongoingSentence and len(word)>2:
+        if word[-1] in lineEnd and ongoingSentence:
             sentence += word + ' '
             myImmutableCollection.append(sentence)
             sentence = ""
@@ -48,7 +48,7 @@ def LineDetector():
 """
 End of task one
 """
-
+print(LineDetector())
 #--------------------------------
 
 """
