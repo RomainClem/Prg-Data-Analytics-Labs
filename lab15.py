@@ -53,5 +53,5 @@ def analyseTemp(data, minvalue, maxvalue):
     print("for temp in range", minvalue, "to", maxvalue, "the mean val is", meanVal)
 
 
-for temp in range(1, 40, 5):
+for temp in range(1, 39, 5):
     analyseTemp(data, temp, temp+4)
